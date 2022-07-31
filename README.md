@@ -68,4 +68,11 @@ Para este punto es importante **importar Router** desde **@angular/router** y **
 
 ## Cambiar las rutas de los breadcrumbs por nombres de componente
 
-xx
+Finalmente ya solo nos queda **cambiar los nombres de las rutas en los breadcrumbs** ya que **por defecto nos pone la url**, esto es fácil y lo haremos desde el **archivo .ts** de **cada** componente *(de igual forma que el paso anterior solo aplicaba a los componentes padres, este aplica a todos)*.
+
+Primero de todo tenemos que **importar el BreadcrumbService** desde **xng-breadcrumb** y **declararlo en el constructor** para poder utilizarlo.
+
+Después de este paso ya podemos **cambiar el nombre de nuestro componente en los breadcrumbs referenciando su alias** *(siendo el alias el nombre que le habíamos dado anteriormente en el archivo app-routing.module.ts)*. **Referenciamos el alias después de la @ y, después de la coma (,) le indicamos el nombre que queremos que tenga el componente en la ruta**.
+
+![tb-6](https://user-images.githubusercontent.com/36458569/182037552-fdf3e665-2f3f-4a10-b311-125a2993c474.png)
+
