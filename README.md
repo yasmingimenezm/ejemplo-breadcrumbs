@@ -1,27 +1,23 @@
 # Ejemplo de breadcrumbs en Angular con xng-breadcrumb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
+![breadcrumbs-ejemplo](https://user-images.githubusercontent.com/36458569/182034831-186496e1-6a6f-4d1f-9f6d-b6ee6705c191.gif)
 
-## Development server
+## Nuestros componentes de ejemplo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![componentes-breadcrumbs](https://user-images.githubusercontent.com/36458569/182034506-c563b6a2-c87d-4533-8e2c-8cbfea084aab.png)
 
-## Code scaffolding
+## Instalación y configuración de xng-breadcrumb
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+xx
 
-## Build
+## Routing en app-routing.module.ts - añadimos jerarquía
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+xx
 
-## Running unit tests
+## Configuración de las caja padre
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+xx
 
-## Running end-to-end tests
+## Cambiar las rutas de los breadcrumbs por nombres de componente
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+xx
