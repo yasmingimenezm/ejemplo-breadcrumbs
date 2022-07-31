@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 30px;
+}
+
+div {
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    height: 300px;
+    margin-top: 40px;
+    h1 {
+        margin-bottom: 30px;
+        span {
+            text-decoration: underline;
+        }
+    }
+    button {
+        padding: 10px;
+    }
+}
