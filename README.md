@@ -36,7 +36,15 @@ También es posible crear un nuevo componente para los breadcrumbs y incluir all
 
 ## Routing en app-routing.module.ts - añadimos jerarquía
 
-xx
+Para el siguiente paso vamos a configurar nuestro **Routing** a través del archivo **app-routing.module.ts**, para la jerarquía que hemos establecido al principio del ejemplo lo haremos de la siguiente forma:
+
+![tb-3](https://user-images.githubusercontent.com/36458569/182036873-e5e60bf4-b473-4cbc-9a53-d2f4d717e3f4.png)
+
+Es importante que prestemos atención a estos puntos:
+
+- **children**: es la forma que tenemos de decirle al routing de Angular que estamos estableciendo una jerarquía de componentes padre y componentes hijos, esto es lo que nos permitirá que las rutas de los breadcrumbs salgan de esta forma ****Padre > Hijo A > Hijo B****.
+
+- **data: {breadcrumb: {alias: ''}** nos permite indicar un alias para referenciar a ese componente, lo utilizaremos más adelante así que también es aconsejable establecerlo.
 
 ## Configuración de las caja padre
 
