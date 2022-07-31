@@ -42,13 +42,29 @@ Para el siguiente paso vamos a configurar nuestro **Routing** a través del arch
 
 Es importante que prestemos atención a estos puntos:
 
-- **children**: es la forma que tenemos de decirle al routing de Angular que estamos estableciendo una jerarquía de componentes padre y componentes hijos, esto es lo que nos permitirá que las rutas de los breadcrumbs salgan de esta forma ****Padre > Hijo A > Hijo B****.
+- **children**: es la forma que tenemos de decirle al routing de Angular que estamos estableciendo una jerarquía de componentes padre y componentes hijos, esto es lo que nos permitirá que las rutas de los breadcrumbs salgan de esta forma ***Padre > Hijo A > Hijo B***.
 
 - **data: {breadcrumb: {alias: ''}** nos permite indicar un alias para referenciar a ese componente, lo utilizaremos más adelante así que también es aconsejable establecerlo.
 
-## Configuración de las caja padre
+## Configuración de los componentes padre
 
-xx
+A continuación, nos vamos a configurar los componentes con rol de **padre**, que son:
+
+- Caja roja - Padre
+- Caja azul - Hijo A (*que es hijo y padre a la vez*)
+
+Para esto es **muy importante** añadir el tag **router-outlet** en los archivos **.html** de cada componente, nosotros lo indicamos al final:
+
+![tb-4](https://user-images.githubusercontent.com/36458569/182037226-384d6408-d198-487c-bf5b-f96ccf06fc0d.png)
+
+Todo el contenido del padre lo contendremos en un **div** *(o cualquier otro elemento)* al que le pasaremos una **directiva ngIf** que recogerá el resultado de la siguiente función:
+
+![tb-5](https://user-images.githubusercontent.com/36458569/182037230-109628ac-8d5d-4baa-a439-0339996da436.png)
+
+A través de esta función, que devolverá ***true*** o ***false*** según la comparación que le establecemos, podemos saber si la ruta actual de nuestra web es la del componente en concreto, en ese caso *(que sería cuando devuelve true)* **SÍ** cargaremos el contenido que tenemos dentro del div a través del ngIf, de lo contrario, en caso de que estemos en uno de los hijos y que, por tanto, a través del router-outlet estemos mostrando más de un componente, lo que conseguimos con esta directiva ngIf es que no nos pinte el componente padre y evitemos esos duplicados.
+
+Para este punto es importante **importar Router** desde **@angular/router** y **declararlo en el constructor** para poder utilizarlo y que nos diga en qué componente estamos según la url. En el ejemplo véis que la información del componente padre raíz se mostrará solo si estamos en la url '/', que sería la raíz de nuestra web.
+
 
 ## Cambiar las rutas de los breadcrumbs por nombres de componente
 
