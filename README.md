@@ -44,7 +44,7 @@ Es importante que prestemos atención a estos puntos:
 
 - **children**: es la forma que tenemos de decirle al routing de Angular que estamos estableciendo una jerarquía de componentes padre y componentes hijos, esto es lo que nos permitirá que las rutas de los breadcrumbs salgan de esta forma ***Padre > Hijo A > Hijo B***.
 
-- **data: {breadcrumb: {alias: ''}** nos permite indicar un alias para referenciar a ese componente, lo utilizaremos más adelante así que también es aconsejable establecerlo.
+- **data: {breadcrumb: {alias: ''}** nos permite indicar un alias para referenciar a ese componente, lo utilizaremos más adelante así que también es aconsejable establecerlo. ***EDIT: Si simplemente ponemos {breadcrumb: 'Nombre del componente'} no tendremos que modificar el alias más adelante.***
 
 ## Configuración de los componentes padre
 
@@ -65,8 +65,9 @@ A través de esta función, que devolverá ***true*** o ***false*** según la co
 
 Para este punto es importante **importar Router** desde **@angular/router** y **declararlo en el constructor** para poder utilizarlo y que nos diga en qué componente estamos según la url. En el ejemplo véis que la información del componente padre raíz se mostrará solo si estamos en la url '/', que sería la raíz de nuestra web.
 
-
 ## Cambiar las rutas de los breadcrumbs por nombres de componente
+
+***EDIT: Si simplemente ponemos {breadcrumb: 'Nombre del componente'} no tendremos que modificar el alias en este paso.***
 
 Finalmente ya solo nos queda **cambiar los nombres de las rutas en los breadcrumbs** ya que **por defecto nos pone la url**, esto es fácil y lo haremos desde el **archivo .ts** de **cada** componente *(de igual forma que el paso anterior solo aplicaba a los componentes padres, este aplica a todos)*.
 
